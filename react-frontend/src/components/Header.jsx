@@ -4,8 +4,8 @@ export default function Header() {
   return (
     <div className="bg-[#279EFF] text-white py-4">
       <div className="container flex justify-between items-center">
-        <div>
-          <i className="fa-solid fa-hotel text-3xl"></i>
+        <div className="flex items-center">
+          <i className="fa-solid fa-hotel text-3xl mr-3"></i>
           Super Hostel BD
         </div>
         <div className="space-x-4">
