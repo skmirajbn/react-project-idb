@@ -14,6 +14,7 @@ export default function Header() {
           <Link to="#">Social</Link>
           <Link to="#">Blog</Link>
           <Link to="#">Contact</Link>
+          <Link to="#">Our Team</Link>
           <Link className="bg-orange-500 py-2 px-6 rounded-full" to="#">
             Book a Seat
           </Link>
