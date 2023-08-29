@@ -1,5 +1,5 @@
-import Footer from "../components/sections/Footer";
-import Header from "../components/sections/header";
+import Header from "../components/Header";
+import Footer from "./../components/Footer";
 
 export default function Page404() {
   return (
