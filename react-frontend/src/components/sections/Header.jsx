@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
+  const active = "text-cyan-600 font-bold inline-block bg-white px-4 leading-8 rounded-full";
   return (
     <div className="bg-[#279EFF] text-white py-4">
       <div className="container flex justify-between items-center">
@@ -9,15 +10,30 @@ export default function Header() {
           Super Hostel BD
         </div>
         <div className="space-x-4">
-          <Link to="#">Home</Link>
-          <Link to="#">About Us</Link>
-          <Link to="#">Social</Link>
-          <Link to="#">Blog</Link>
-          <Link to="#">Contact</Link>
-          <Link to="#">Our Team</Link>
-          <Link className="bg-orange-500 py-2 px-6 rounded-full" to="#">
+          <NavLink to="" className={({ isActive }) => (isActive ? active : null)}>
+            Home
+          </NavLink>
+          <NavLink to="about" className={({ isActive }) => (isActive ? active : null)}>
+            About Us
+          </NavLink>
+          <NavLink to="social" className={({ isActive }) => (isActive ? active : null)}>
+            Social
+          </NavLink>
+          <NavLink to="blog" className={({ isActive }) => (isActive ? active : null)}>
+            Blog
+          </NavLink>
+          <NavLink to="contact" className={({ isActive }) => (isActive ? active : null)}>
+            Contact
+          </NavLink>
+          <NavLink to="team" className={({ isActive }) => (isActive ? active : null)}>
+            Our Team
+          </NavLink>
+          <NavLink to="login" className={({ isActive }) => (isActive ? active : null)}>
+            Login
+          </NavLink>
+          <NavLink className="bg-orange-500 py-2 px-6 rounded-full" to="#">
             Book a Seat
-          </Link>
+          </NavLink>
         </div>
         <div className="space-x-4 flex justify-center items-center">
           {/* Search */}

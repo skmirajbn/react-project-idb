@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import dataJson from "./../assets/animations/ioLsJWnw2s.json";
+import dataJson from "../../assets/animations/ioLsJWnw2s.json";
 
 export default function Banner() {
   const [refButton, inView] = useInView();

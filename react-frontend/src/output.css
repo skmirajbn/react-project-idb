@@ -582,11 +582,17 @@ video {
 .mt-4{
   margin-top: 1rem;
 }
+.inline-block{
+  display: inline-block;
+}
 .flex{
   display: flex;
 }
 .table{
   display: table;
+}
+.contents{
+  display: contents;
 }
 .hidden{
   display: none;
@@ -602,6 +608,9 @@ video {
 }
 .h-full{
   height: 100%;
+}
+.h-px{
+  height: 1px;
 }
 .w-32{
   width: 8rem;
@@ -675,6 +684,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\.\/src\/assets\/img\/hostel-banner\.jpg\'\)\]{
   background-image: url('./src/assets/img/hostel-banner.jpg');
 }
@@ -708,8 +721,23 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.py-56{
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pb-4{
   padding-bottom: 1rem;
+}
+.text-center{
+  text-align: center;
 }
 .text-3xl{
   font-size: 1.875rem;
@@ -723,6 +751,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-bold{
   font-weight: 700;
 }
@@ -732,6 +764,9 @@ video {
 .italic{
   font-style: italic;
 }
+.leading-8{
+  line-height: 2rem;
+}
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -740,8 +775,45 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-orange-500{
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+.text-orange-600{
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+.text-cyan-600{
+  --tw-text-opacity: 1;
+  color: rgb(8 145 178 / var(--tw-text-opacity));
+}
+.text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
 .underline{
   text-decoration-line: underline;
+}
+.decoration-orange-600{
+  text-decoration-color: #ea580c;
+}
+.underline-offset-8{
+  text-underline-offset: 8px;
+}
+.underline-offset-4{
+  text-underline-offset: 4px;
 }
 .opacity-50{
   opacity: 0.5;
