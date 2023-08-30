@@ -9,7 +9,7 @@ export default function Login() {
           <section id="web-job-category" className="">
             <MotionWrapScale>
               <div className=" py-6 px-12 rounded-md  h-[82vh] flex justify-center items-center">
-                <div className="h-[420px] w-96 bg-green-100 rounded-lg py-10 px-10 space-y-6 shadow-xl">
+                <div className="h-[420px] w-96 bg-blue-100 rounded-lg py-10 px-10 space-y-6 shadow-xl">
                   <h3 className="text-2xl text-center font-bold">Sign In</h3>
 
                   <div className="space-y-2">

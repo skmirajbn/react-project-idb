@@ -794,17 +794,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\'\.\/src\/assets\/img\/hostel-banner\.jpg\'\)\]{
-  background-image: url('./src/assets/img/hostel-banner.jpg');
-}
-.bg-\[url\(\'\.\/publicimg\/hostel-banner\.jpg\'\)\]{
-  background-image: url('./publicimg/hostel-banner.jpg');
-}
-.bg-\[url\(\'\.\/public\/img\/hostel-banner\.jpg\'\)\]{
-  background-image: url('./public/img/hostel-banner.jpg');
-}
-.bg-\[url\(\'img\/hostel-banner\.jpg\'\)\]{
-  background-image: url('img/hostel-banner.jpg');
+.bg-blue-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 .bg-\[url\(\'\/img\/hostel-banner\.jpg\'\)\]{
   background-image: url('/img/hostel-banner.jpg');
@@ -866,6 +858,22 @@ video {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-\[10px\]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.py-\[8px\]{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.py-\[6px\]{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.py-\[5px\]{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .pb-12{
   padding-bottom: 3rem;
