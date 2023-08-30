@@ -1,5 +1,6 @@
 import Accommodation from "./Accommodation";
 import Banner from "./Banner";
+import OurBranches from "./OurBranches";
 import Services from "./Services";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Banner />
         <Services />
         <Accommodation />
+        <OurBranches />
       </div>
     </>
   );

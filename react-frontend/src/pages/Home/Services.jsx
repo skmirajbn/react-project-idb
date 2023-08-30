@@ -148,7 +148,7 @@ export default function Services() {
               </MotionWrapDown>
             </div>
             <h2 className="text-center text-xl">
-              <MotionWrapUp>Air Conditioning</MotionWrapUp>
+              <MotionWrapUp>Swimming Pool</MotionWrapUp>
             </h2>
             <p className="text-center text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quam?</p>
             <Link className="text-center">
