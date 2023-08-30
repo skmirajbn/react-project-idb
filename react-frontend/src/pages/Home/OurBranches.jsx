@@ -1,22 +1,105 @@
 import Heading from "../../components/Heading";
-import MotionWrapDown from "../../components/motionWrap/MotionWrapDown";
+import Button from "./../../components/Button";
 import MotionWrapScale from "./../../components/motionWrap/MotionWrapScale";
 
 export default function OurBranches() {
   return (
-    <div className="container">
-      <div className="py-20 space-y-10">
-        <Heading>Accommodation</Heading>
-        <div className="grid grid-cols-2 items-center gap-6">
-          <MotionWrapDown>
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold uppercase">Our Beautiful Accommodation</h2>
-              <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio iste, beatae corrupti vitae soluta eaque suscipit modi veritatis magnam delectus tempora magni ut, sapiente voluptate fuga repellat ipsum maxime cupiditate voluptatibus voluptatem? Perspiciatis expedita rerum ab, deserunt fugit autem, nisi voluptatem itaque sapiente, minus eligendi tempore quo incidunt sed aliquam?</p>
-            </div>
-          </MotionWrapDown>
-          <MotionWrapScale>
-            <img className="rounded-lg" src="src\assets\img\Accommodation.jpg" alt="" />
-          </MotionWrapScale>
+    <div className="bg-gray-200">
+      <div className="container">
+        <div className="py-20 space-y-10">
+          <Heading>Our Branches</Heading>
+          <div className="grid grid-cols-3 items-center gap-6">
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-1.png" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Dhanmondi Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-2.jpg" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Motijheel Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-3.jpg" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Mohammadpur Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-4.jpg" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Mirpur Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-5.jpg" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Banani Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+            {/* Single Branch */}
+            <MotionWrapScale>
+              <div className="space-y-2">
+                <img className="w-full h-64 rounded-xl" src="src\assets\img\hostel-6.jpg" alt="" />
+                <h3 className="text-2xl text-center font-semibold">Uttara Branch</h3>
+                <h4 className="text-center text-gray-500">
+                  <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
+                </h4>
+                <div className="w-full flex justify-center">
+                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                    Take a Tour <i className="fa-solid fa-chevron-right"></i>
+                  </Button>
+                </div>
+              </div>
+            </MotionWrapScale>
+          </div>
         </div>
       </div>
     </div>
