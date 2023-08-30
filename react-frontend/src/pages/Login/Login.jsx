@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./../../components/Button";
 import MotionWrapScale from "./../../components/motionWrap/MotionWrapScale";
 export default function Login() {
@@ -23,7 +24,9 @@ export default function Login() {
 
                   <div className="">
                     <Button className="mx-auto block">
-                      <a className="bg-blue-500 px-6 py-1 rounded-full text-white">Login</a>
+                      <Link to="/dashboard" className="bg-blue-500 px-6 py-1 rounded-full text-white">
+                        Login
+                      </Link>
                     </Button>
                   </div>
 
