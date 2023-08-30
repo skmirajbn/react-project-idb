@@ -1,8 +1,16 @@
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import FadeIn from "./motionWrap/FadeIn";
 import MotionWrapScale from "./motionWrap/MotionWrapScale";
 
-export default function Header() {
+const Header = () => {
+  useEffect(() => {}, []);
+  console.log("rended");
+
+  const transition = {
+    transitionTimingFunction: "transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);",
+    transitionDuration: "200ms",
+  };
   const active = "text-cyan-600 font-bold inline-block bg-white px-4 leading-8 rounded-full";
   return (
     <div className="bg-[#279EFF] text-white py-4">
@@ -13,25 +21,25 @@ export default function Header() {
             Super Hostel BD
           </div>
           <div className="space-x-4">
-            <NavLink to="" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Home
             </NavLink>
-            <NavLink to="about" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="about" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               About Us
             </NavLink>
-            <NavLink to="social" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="social" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Social
             </NavLink>
-            <NavLink to="blog" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="blog" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Blog
             </NavLink>
-            <NavLink to="contact" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="contact" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Contact
             </NavLink>
-            <NavLink to="team" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="team" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Our Team
             </NavLink>
-            <NavLink to="login" className={({ isActive }) => (isActive ? active : null)}>
+            <NavLink to="login" className={({ isActive }) => (isActive ? active : null)} style={transition}>
               Login
             </NavLink>
             <div className="inline-block">
@@ -65,4 +73,6 @@ export default function Header() {
       </FadeIn>
     </div>
   );
-}
+};
+
+export default React.memo(Header);
