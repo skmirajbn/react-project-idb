@@ -573,6 +573,12 @@ video {
 .z-0{
   z-index: 0;
 }
+.order-2{
+  order: 2;
+}
+.order-1{
+  order: 1;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -633,6 +639,9 @@ video {
 }
 .w-1\/2{
   width: 50%;
+}
+.flex-1{
+  flex: 1 1 0%;
 }
 .shrink{
   flex-shrink: 1;
