@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import MotionWrapScale from "./motionWrap/MotionWrapScale";
 
 export default function Header() {
   const active = "text-cyan-600 font-bold inline-block bg-white px-4 leading-8 rounded-full";
@@ -31,9 +32,13 @@ export default function Header() {
           <NavLink to="login" className={({ isActive }) => (isActive ? active : null)}>
             Login
           </NavLink>
-          <NavLink className="bg-orange-500 py-2 px-6 rounded-full" to="#">
-            Book a Seat
-          </NavLink>
+          <div className="inline-block">
+            <MotionWrapScale>
+              <NavLink className="bg-orange-500 py-2 px-6 rounded-full" to="#">
+                Book a Seat
+              </NavLink>
+            </MotionWrapScale>
+          </div>
         </div>
         <div className="space-x-4 flex justify-center items-center">
           {/* Search */}
