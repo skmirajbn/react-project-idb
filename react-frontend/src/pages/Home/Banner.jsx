@@ -10,7 +10,6 @@ export default function Banner() {
   const [tikicon, isTikView] = useInView();
   const lottieRef = useRef();
   useEffect(() => {
-    console.log("rendered");
     if (isTikView) {
       lottieRef.current.playSegments([0, 25], true);
     }
@@ -19,7 +18,7 @@ export default function Banner() {
   const transition = { delay: ".2", type: "spring", stiffness: 60, damping: 7 };
 
   return (
-    <div className="relative w-full h-[70vh] z-0 bg-[url('./src/assets/img/hostel-banner.jpg')] bg-cover bg-center">
+    <div className="relative w-full h-[70vh] z-0 bg-[url('/img/hostel-banner.jpg')] bg-cover bg-center">
       <div className="h-full flex flex-col justify-center items-center">
         <motion.h3 ref={refHeading} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} initial={{ opacity: 0, y: -100 }} transition={transition} className="text-5xl text-white font-bold">
           <i className="fa-solid fa-hotel"></i> Super Hostel BD

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import FadeIn from "./motionWrap/FadeIn";
 import MotionWrapScale from "./motionWrap/MotionWrapScale";
 
-const Header = () => {
+function Header() {
   useEffect(() => {}, []);
-  console.log("rended");
+  console.log("header rended");
 
   const transition = {
     transitionTimingFunction: "transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);",
@@ -73,6 +73,6 @@ const Header = () => {
       </FadeIn>
     </div>
   );
-};
+}
 
-export default React.memo(Header);
+export default Header;

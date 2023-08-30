@@ -11,7 +11,7 @@ export default function BedsWeProvide() {
         <MotionWrapLeft>
           <section className="flex space-x-10">
             <div className="flex space-x-6 w-full items-center justify-between">
-              <img className="h-44 w-full object-cover rounded-lg" src="src\assets\img\room-1.jpg" alt="" />
+              <img className="h-44 w-full object-cover rounded-lg" src="/img/room-1.jpg" alt="" />
               <div className=" space-y-2">
                 <h3 className="text-2xl">VIP</h3>
                 <p className="text-gray-500 italic text-sm">
@@ -23,7 +23,7 @@ export default function BedsWeProvide() {
               </div>
             </div>
             <div className="flex space-x-6 w-full items-center justify-between">
-              <img className="h-44 w-full object-cover rounded-lg" src="src\assets\img\room-2.jpg" alt="" />
+              <img className="h-44 w-full object-cover rounded-lg" src="/img/room-2.jpg" alt="" />
               <div className=" space-y-2">
                 <h3 className="text-2xl">Business</h3>
                 <p className="text-gray-500 italic text-sm">
@@ -48,7 +48,7 @@ export default function BedsWeProvide() {
                   Learn More <i className="fa-solid fa-chevron-right"></i>
                 </Button>
               </div>
-              <img className="h-44 w-full object-cover rounded-lg" src="src\assets\img\room-3.jpg" alt="" />
+              <img className="h-44 w-full object-cover rounded-lg" src="/img/room-3.jpg" alt="" />
             </div>
             <div className="flex space-x-6 w-full items-center justify-between">
               <div className=" space-y-2">
@@ -60,7 +60,7 @@ export default function BedsWeProvide() {
                   Learn More <i className="fa-solid fa-chevron-right"></i>
                 </Button>
               </div>
-              <img className="h-44 w-full object-cover rounded-lg" src="src\assets\img\room-4.jpg" alt="" />
+              <img className="h-44 w-full object-cover rounded-lg" src="/img/room-4.jpg" alt="" />
             </div>
           </section>
         </MotionWrapRight>

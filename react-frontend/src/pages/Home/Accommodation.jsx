@@ -16,7 +16,7 @@ export default function Accommodation() {
           </MotionWrapDown>
           <MotionWrapScale>
             {" "}
-            <img className="rounded-lg" src="src\assets\img\Accommodation.jpg" alt="" />
+            <img className="rounded-lg" src="/img/Accommodation.jpg" alt="" />
           </MotionWrapScale>
         </div>
       </div>

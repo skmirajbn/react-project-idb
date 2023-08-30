@@ -794,14 +794,20 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\'\.\/assets\/img\/bg-doddle\.jpg\'\)\]{
-  background-image: url('./assets/img/bg-doddle.jpg');
-}
 .bg-\[url\(\'\.\/src\/assets\/img\/hostel-banner\.jpg\'\)\]{
   background-image: url('./src/assets/img/hostel-banner.jpg');
 }
-.bg-\[50\%_auto\]{
-  background-size: 50% auto;
+.bg-\[url\(\'\.\/publicimg\/hostel-banner\.jpg\'\)\]{
+  background-image: url('./publicimg/hostel-banner.jpg');
+}
+.bg-\[url\(\'\.\/public\/img\/hostel-banner\.jpg\'\)\]{
+  background-image: url('./public/img/hostel-banner.jpg');
+}
+.bg-\[url\(\'img\/hostel-banner\.jpg\'\)\]{
+  background-image: url('img/hostel-banner.jpg');
+}
+.bg-\[url\(\'\/img\/hostel-banner\.jpg\'\)\]{
+  background-image: url('/img/hostel-banner.jpg');
 }
 .bg-cover{
   background-size: cover;
@@ -972,9 +978,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 @media (max-width: 575.98px) {
 
@@ -1022,10 +1025,3 @@ video {
     width: 1320px
 }
   }
-
-@media (min-width: 768px){
-
-  .md\:bg-\[21\%_auto\]{
-    background-size: 21% auto;
-  }
-}
