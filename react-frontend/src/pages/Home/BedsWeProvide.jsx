@@ -4,7 +4,7 @@ import Heading from "../../components/Heading";
 export default function BedsWeProvide() {
   return (
     <div className="container">
-      <div className="py-20 space-y-10">
+      <div className="py-20 space-y-12">
         <Heading>Our Exclusive Room</Heading>
         <section className="flex space-x-10">
           <div className="flex space-x-6 w-full items-center justify-between">
@@ -35,7 +35,7 @@ export default function BedsWeProvide() {
         <section className="flex space-x-10">
           <div className="flex space-x-6 w-full items-center justify-between">
             <div className=" space-y-2">
-              <h3 className="text-2xl">VIP</h3>
+              <h3 className="text-2xl">Standard</h3>
               <p className="text-gray-500 italic text-sm">
                 <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, magni.</q>
               </p>
@@ -47,7 +47,7 @@ export default function BedsWeProvide() {
           </div>
           <div className="flex space-x-6 w-full items-center justify-between">
             <div className=" space-y-2">
-              <h3 className="text-2xl">Business</h3>
+              <h3 className="text-2xl">Economy</h3>
               <p className="text-gray-500 italic text-sm">
                 <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, magni.</q>
               </p>
