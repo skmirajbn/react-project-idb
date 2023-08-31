@@ -32,7 +32,7 @@ export default function Banner() {
           <Lottie lottieRef={lottieRef} className="w-32" animationData={dataJson} loop={false} />
         </motion.div>
       </div>
-      <div className="bg-black absolute left-0 right-0 bottom-0 top-0 opacity-50 -z-10"></div>
+      <div className="bg-black absolute left-0 right-0 bottom-0 top-0 opacity-20 -z-10"></div>
     </div>
   );
 }

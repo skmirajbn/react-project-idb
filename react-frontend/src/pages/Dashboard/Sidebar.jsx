@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
   return (
     <section id="web-job-category" className="">
@@ -20,14 +22,14 @@ function Sidebar() {
               <i className="fa-solid fa-users inline-block pr-2"></i> Members
             </div>
             <div className="collapse-content bg-gray-200 space-y-5 pt-6 px-0 text-black">
-              <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link">
-                <i className="fa-solid fa-user-plus inline-block pr-2"></i> ইউজার যোগ
-              </a>
-              <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link">
-                <i className="fa-solid fa-eye inline-block pr-2"></i> ইউজার দেখুন
-              </a>
+              <Link to="member-add" className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link">
+                <i className="fa-solid fa-user-plus inline-block pr-2"></i> Member Add
+              </Link>
+              <Link to="member-view" className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link">
+                <i className="fa-solid fa-eye inline-block pr-2"></i> View Member
+              </Link>
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> ইউজার রিস্টোর করুন
+                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> Restore Memeber
               </a>
             </div>
           </div>
@@ -38,13 +40,13 @@ function Sidebar() {
             </div>
             <div className="collapse-content bg-gray-200 space-y-5 pt-6 px-0 text-black">
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-plus inline-block pr-2"></i> চাকুরি যোগ
+                <i className="fa-solid fa-plus inline-block pr-2"></i> Add Room
               </a>
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-eye inline-block pr-2"></i> চাকুরি সমূহ দেখুন
+                <i className="fa-solid fa-eye inline-block pr-2"></i> View Rooms
               </a>
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> চাকুরি রিস্টোর
+                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> Restore Room
               </a>
             </div>
           </div>
@@ -55,13 +57,13 @@ function Sidebar() {
             </div>
             <div className="collapse-content bg-gray-200 space-y-5 pt-6 px-0 text-black">
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-plus inline-block pr-2"></i> ক্যাটাগরি যোগ
+                <i className="fa-solid fa-plus inline-block pr-2"></i> Add Seat
               </a>
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-eye inline-block pr-2"></i> ক্যাটাগরি দেখুন
+                <i className="fa-solid fa-eye inline-block pr-2"></i> View Seats
               </a>
               <a className="block hover:bg-gray-300 px-12 py-4 m-0 ac-link" href="#">
-                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> ক্যাটাগরি রিস্টোর
+                <i className="fa-solid fa-trash-can-arrow-up inline-block pr-2"></i> Restore Seat
               </a>
             </div>
           </div>

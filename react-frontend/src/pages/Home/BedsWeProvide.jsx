@@ -7,7 +7,7 @@ export default function BedsWeProvide() {
   return (
     <div className="container">
       <div className="py-20 space-y-12">
-        <Heading>Our Exclusive Room</Heading>
+        <Heading>Beds We Provide</Heading>
         <MotionWrapLeft>
           <section className="flex space-x-10">
             <div className="flex space-x-6 w-full items-center justify-between">
