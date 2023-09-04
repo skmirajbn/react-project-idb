@@ -6,7 +6,7 @@ function MediaCoverage() {
     <div className="container">
       <div className="py-20 space-y-10">
         <Heading>On Top Media Coverage</Heading>
-        <div className="flex  gap-10 justify-center">
+        <div className="flex flex-1 justify-center">
           <div className="w-2/12 block">
             <MotionWrapScale>
               <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full " src="/img/media-coverage/prothom-alo.webp" alt="" />
@@ -37,54 +37,70 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/janakantho.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">Daily Janakantho</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/jago-news-24.webp" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">Jagonews 24</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bangladesh-today.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">Bangladesh Today</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bd-news-24.webp" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">BD News 24</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/channel-i.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">Channel i</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/dbc-news.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">DBC News</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/ntv.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">NTV</h3>
-            </div>
-          </MotionWrapScale>
-          <MotionWrapScale>
-            <div>
-              <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/rtv-news.png" alt="" />
-              <h3 className="text-center font-medium text-black text-lg">RTV News</h3>
-            </div>
-          </MotionWrapScale>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/janakantho.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">Daily Janakantho</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/jago-news-24.webp" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">Jagonews 24</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bangladesh-today.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">Bangladesh Today</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bd-news-24.webp" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">BD News 24</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/channel-i.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">Channel i</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/dbc-news.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">DBC News</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/ntv.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">NTV</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
+          <div className="w-2/12 block">
+            <MotionWrapScale>
+              <div>
+                <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/rtv-news.png" alt="" />
+                <h3 className="text-center font-medium text-black text-lg">RTV News</h3>
+              </div>
+            </MotionWrapScale>
+          </div>
         </div>
       </div>
     </div>
