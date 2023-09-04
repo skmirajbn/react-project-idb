@@ -9,10 +9,10 @@ function ContactSectin() {
           <div>
             <h3>Send Message</h3>
             <form className="flex flex-col">
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Mobile Number" />
-              <input type="text" placeholder="Email ID" />
-              <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+              <input className="bg-white" type="text" placeholder="Name" />
+              <input className="bg-white" type="text" placeholder="Mobile Number" />
+              <input className="bg-white" type="text" placeholder="Email ID" />
+              <textarea className="bg-white" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
             </form>
           </div>
           <div>contact</div>
