@@ -1,9 +1,9 @@
 import MemberViewSkeleton from "./MemberViewSkeleton";
 
 function MemberView() {
+  let isLoading = false;
   return (
     <div className="space-y-4 bg-white my-6 py-6 px-12 rounded-md shadow-lg">
-      <div className="block h-24 w-24"></div>
       <div className="flex justify-between">
         <h2 className="text-lg font-bold text-blue-950">
           <i className="fa-solid fa-users"></i> All Users
@@ -18,13 +18,13 @@ function MemberView() {
               <th className="py-4">Name</th>
               <th className="py-4">Username</th>
               <th className="py-4">Email</th>
-              <th className="py-4">Roll</th>
+              <th className="py-4">Role</th>
               <th className="py-4">Image</th>
               <th className="py-4">Action</th>
             </tr>
           </thead>
           <tbody>
-            <MemberViewSkeleton count={5} />
+            {isLoading && <MemberViewSkeleton count={10} />}
             <tr>
               <td className="text-center py-4">46</td>
               <td className="text-center py-4">Rakibul Islam</td>
@@ -32,7 +32,7 @@ function MemberView() {
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
               <td className="text-center py-4">
-                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+                <img className="w-12 h-12 object-cover rounded-full mx-auto" src="\img\avatar-1.jpg" alt="" />
               </td>
               <td className="text-center py-4">
                 <a>
@@ -48,7 +48,7 @@ function MemberView() {
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
               <td className="text-center py-4">
-                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+                <img className="w-12 h-12 object-cover rounded-full mx-auto" src="\img\avatar-1.jpg" alt="" />
               </td>
               <td className="text-center py-4">
                 <a>
@@ -64,7 +64,7 @@ function MemberView() {
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
               <td className="text-center py-4">
-                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+                <img className="w-12 h-12 object-cover rounded-full mx-auto" src="\img\avatar-1.jpg" alt="" />
               </td>
               <td className="text-center py-4">
                 <a>
@@ -80,7 +80,7 @@ function MemberView() {
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
               <td className="text-center py-4">
-                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+                <img className="w-12 h-12 object-cover rounded-full mx-auto" src="\img\avatar-1.jpg" alt="" />
               </td>
               <td className="text-center py-4">
                 <a>

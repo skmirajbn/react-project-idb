@@ -4,15 +4,15 @@ function Sidebar() {
   return (
     <section id="web-job-category" className="">
       <div className=" bg-blue-300 rounded-md shadow-lg overflow-hidden">
-        <div className=" bg-gray-50 px-12 py-5">
+        <div className=" bg-gray-50 px-12 py-5 space-y-4">
           <h2 className="text-lg font-bold text-black">
             <i className="fa-solid fa-bars"></i> Control Panel
           </h2>
-          <a>
-            <h2 className="text-lg bg-cyan-700 px-2 py-1 text-white rounded-md">
+          <Link className="block" to="/dashboard">
+            <h2 className="text-lg bg-cyan-700 px-2 py-1 text-white rounded-md w-fit">
               <i className="fa-solid fa-ticket"></i> Dashboard
             </h2>
-          </a>
+          </Link>
         </div>
 
         <div className="text-white">

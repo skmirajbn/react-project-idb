@@ -17,8 +17,10 @@ function Header() {
       <FadeIn>
         <div className="container flex justify-between items-center">
           <div className="flex items-center">
-            <i className="fa-solid fa-hotel text-3xl mr-3"></i>
-            Super Hostel BD
+            <Link to="">
+              <i className="fa-solid fa-hotel text-3xl mr-3"></i>
+            </Link>
+            <Link to="">Super Hostel BD</Link>
           </div>
           <div className="space-x-4">
             <NavLink to="" className={({ isActive }) => (isActive ? active : null)} style={transition}>
