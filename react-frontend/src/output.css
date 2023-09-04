@@ -1780,9 +1780,6 @@ details.collapse summary::-webkit-details-marker{
 .flex-col{
   flex-direction: column;
 }
-.items-end{
-  align-items: flex-end;
-}
 .items-center{
   align-items: center;
 }
@@ -2019,9 +2016,6 @@ details.collapse summary::-webkit-details-marker{
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-8{
-  padding: 2rem;
-}
 .p-10{
   padding: 2.5rem;
 }
@@ -2096,14 +2090,6 @@ details.collapse summary::-webkit-details-marker{
 .py-\[6px\]{
   padding-top: 6px;
   padding-bottom: 6px;
-}
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 .pb-12{
   padding-bottom: 3rem;

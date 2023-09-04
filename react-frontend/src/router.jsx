@@ -3,8 +3,8 @@ import App from "./App";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
 import DashboardSummary from "./pages/Dashboard/DashboardSummary/DashboardSummary";
-import MemberAdd from "./pages/Dashboard/DashboardSummary/Members/MemberAdd";
-import MemberView from "./pages/Dashboard/DashboardSummary/Members/MemberView";
+import MemberAdd from "./pages/Dashboard/Members/MemberAdd";
+import MemberView from "./pages/Dashboard/Members/MemberView";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Page404 from "./pages/Page404";
