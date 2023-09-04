@@ -1686,6 +1686,12 @@ details.collapse summary::-webkit-details-marker{
 .w-full{
   width: 100%;
 }
+.w-6\/12{
+  width: 50%;
+}
+.w-2\/12{
+  width: 16.666667%;
+}
 .min-w-full{
   min-width: 100%;
 }
