@@ -8,8 +8,8 @@ function MediaCoverage() {
         <div>
           {/* Single Coverage Media */}
           <div>
-            <img src="/img/media-coverage/prothom-alo.webp" alt="" />
-            <h3>Prothom Alo</h3>
+            <img className="w-28 h-28 object-contain border-2 border-black  rounded-full" src="/img/media-coverage/prothom-alo.webp" alt="" />
+            <h3 className="text-center">Prothom Alo</h3>
           </div>
         </div>
       </div>
