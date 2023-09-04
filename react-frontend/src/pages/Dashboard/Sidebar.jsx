@@ -4,7 +4,7 @@ function Sidebar() {
   return (
     <section id="web-job-category" className="">
       <div className=" bg-blue-300 rounded-md shadow-lg overflow-hidden">
-        <div className="flex justify-between bg-gray-50 px-12 py-5">
+        <div className=" bg-gray-50 px-12 py-5">
           <h2 className="text-lg font-bold text-black">
             <i className="fa-solid fa-bars"></i> Control Panel
           </h2>
