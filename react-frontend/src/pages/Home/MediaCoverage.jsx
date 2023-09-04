@@ -6,14 +6,14 @@ function MediaCoverage() {
     <div className="container">
       <div className="py-20 space-y-10">
         <Heading>On Top Media Coverage</Heading>
-        <div className="flex flex-1 justify-center">
-          <div className="w-2/12 block">
+        <div className="grid grid-cols-6 gap-16">
+          <div className=" block">
             <MotionWrapScale>
               <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full " src="/img/media-coverage/prothom-alo.webp" alt="" />
               <h3 className="text-center font-medium text-black text-lg">Prothom Alo</h3>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/ekushey-tv.webp" alt="" />
@@ -21,7 +21,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/somoy-tv.png" alt="" />
@@ -29,7 +29,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className="block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/daily-star.png" alt="" />
@@ -37,7 +37,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/janakantho.png" alt="" />
@@ -45,7 +45,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className="2 block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/jago-news-24.webp" alt="" />
@@ -53,7 +53,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bangladesh-today.png" alt="" />
@@ -61,7 +61,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className="block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/bd-news-24.webp" alt="" />
@@ -69,7 +69,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/channel-i.png" alt="" />
@@ -77,7 +77,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/dbc-news.png" alt="" />
@@ -85,7 +85,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className=" block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/ntv.png" alt="" />
@@ -93,7 +93,7 @@ function MediaCoverage() {
               </div>
             </MotionWrapScale>
           </div>
-          <div className="w-2/12 block">
+          <div className="block">
             <MotionWrapScale>
               <div>
                 <img className="w-28 h-28 object-contain border-2 mx-auto border-black  rounded-full" src="/img/media-coverage/rtv-news.png" alt="" />

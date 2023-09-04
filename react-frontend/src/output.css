@@ -1731,6 +1731,9 @@ details.collapse summary::-webkit-details-marker{
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
 .grid-rows-\[35px_0fr\]{
   grid-template-rows: 35px 0fr;
 }
@@ -1757,6 +1760,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .gap-20{
   gap: 5rem;
+}
+.gap-16{
+  gap: 4rem;
 }
 .gap-y-3{
   row-gap: 0.75rem;
@@ -2043,6 +2049,10 @@ details.collapse summary::-webkit-details-marker{
 .py-\[6px\]{
   padding-top: 6px;
   padding-bottom: 6px;
+}
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .pb-12{
   padding-bottom: 3rem;
