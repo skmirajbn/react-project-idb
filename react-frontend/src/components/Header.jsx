@@ -53,7 +53,7 @@ function Header() {
           <div className="space-x-4 flex justify-center items-center">
             {/* Search */}
             <div className="relative">
-              <input className="px-3 py-1 w-52 text-black rounded-md" type="text" placeholder="Search..." />
+              <input className="px-3 py-1 w-52 text-black rounded-md bg-white" type="text" placeholder="Search..." />
               <i className="fa-solid fa-magnifying-glass absolute right-3 text-black top-1/2 -translate-y-1/2"></i>
             </div>
             <Link to="#">
