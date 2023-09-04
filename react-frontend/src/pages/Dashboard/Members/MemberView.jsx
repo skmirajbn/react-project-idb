@@ -3,33 +3,33 @@ function MemberView() {
     <div className="space-y-4 bg-white my-6 py-6 px-12 rounded-md shadow-lg">
       <div className="flex justify-between">
         <h2 className="text-lg font-bold text-blue-950">
-          <i className="fa-solid fa-users"></i> সকল ইউজার
+          <i className="fa-solid fa-users"></i> All Users
         </h2>
         <h2 className="text-xl text-green-600">Loading..</h2>
       </div>
 
-      <div className="text-gray-700 gap-y-3 overflow-x-auto">
-        <table className="min-w-full table-auto border-collapse border border-slate-400">
+      <div className="text-gray-800 gap-y-3 overflow-x-auto">
+        <table className="min-w-full table-auto ">
           <thead className="bg-gray-200">
             <tr>
-              <th className="border border-slate-300">আইডি</th>
-              <th className="border border-slate-300">নাম</th>
-              <th className="border border-slate-300">ইউজারনেম</th>
-              <th className="border border-slate-300">ইমেইল</th>
-              <th className="border border-slate-300">রোল</th>
-              <th className="border border-slate-300">ছবি</th>
-              <th className="border border-slate-300">একশন</th>
+              <th className="py-4 px-3">ID</th>
+              <th className="py-4">Name</th>
+              <th className="py-4">Username</th>
+              <th className="py-4">Email</th>
+              <th className="py-4">Roll</th>
+              <th className="py-4">Image</th>
+              <th className="py-4">Action</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
+              <td className="text-center py-4">46</td>
+              <td className="text-center py-4">Rakibul Islam</td>
+              <td className="text-center py-4">rakib</td>
+              <td className="text-center py-4">rakib@gmail.com</td>
+              <td className="text-center py-4">Admin</td>
+              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
                 </a>{" "}
@@ -37,13 +37,13 @@ function MemberView() {
               </td>
             </tr>
             <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
+              <td className="text-center py-4">46</td>
+              <td className="text-center py-4">Rakibul Islam</td>
+              <td className="text-center py-4">rakib</td>
+              <td className="text-center py-4">rakib@gmail.com</td>
+              <td className="text-center py-4">Admin</td>
+              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
                 </a>{" "}
@@ -51,13 +51,13 @@ function MemberView() {
               </td>
             </tr>
             <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
+              <td className="text-center py-4">46</td>
+              <td className="text-center py-4">Rakibul Islam</td>
+              <td className="text-center py-4">rakib</td>
+              <td className="text-center py-4">rakib@gmail.com</td>
+              <td className="text-center py-4">Admin</td>
+              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
                 </a>{" "}
@@ -65,55 +65,13 @@ function MemberView() {
               </td>
             </tr>
             <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
-                <a>
-                  <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
-                </a>{" "}
-                | <i className="fa-solid fa-trash pl-2 text-red-600"></i>
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
-                <a>
-                  <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
-                </a>{" "}
-                | <i className="fa-solid fa-trash pl-2 text-red-600"></i>
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
-                <a>
-                  <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
-                </a>{" "}
-                | <i className="fa-solid fa-trash pl-2 text-red-600"></i>
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-300">45</td>
-              <td className="border border-slate-300">Rakibul Islam</td>
-              <td className="border border-slate-300">rakib</td>
-              <td className="border border-slate-300">rakib@gmail.com</td>
-              <td className="border border-slate-300">Admin</td>
-              <td className="border border-slate-300 py-6">Image</td>
-              <td className="border border-slate-300">
+              <td className="text-center py-4">46</td>
+              <td className="text-center py-4">Rakibul Islam</td>
+              <td className="text-center py-4">rakib</td>
+              <td className="text-center py-4">rakib@gmail.com</td>
+              <td className="text-center py-4">Admin</td>
+              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
                 </a>{" "}
