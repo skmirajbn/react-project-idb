@@ -28,7 +28,9 @@ function MemberView() {
               <td className="text-center py-4">rakib</td>
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
-              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
+                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+              </td>
               <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
@@ -42,7 +44,9 @@ function MemberView() {
               <td className="text-center py-4">rakib</td>
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
-              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
+                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+              </td>
               <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
@@ -56,7 +60,9 @@ function MemberView() {
               <td className="text-center py-4">rakib</td>
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
-              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
+                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+              </td>
               <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
@@ -70,7 +76,25 @@ function MemberView() {
               <td className="text-center py-4">rakib</td>
               <td className="text-center py-4">rakib@gmail.com</td>
               <td className="text-center py-4">Admin</td>
-              <td className="text-center py-4">Image</td>
+              <td className="text-center py-4">
+                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+              </td>
+              <td className="text-center py-4">
+                <a>
+                  <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
+                </a>{" "}
+                | <i className="fa-solid fa-trash pl-2 text-red-600"></i>
+              </td>
+            </tr>
+            <tr>
+              <td className="text-center py-4">46</td>
+              <td className="text-center py-4">Rakibul Islam</td>
+              <td className="text-center py-4">rakib</td>
+              <td className="text-center py-4">rakib@gmail.com</td>
+              <td className="text-center py-4">Admin</td>
+              <td className="text-center py-4">
+                <img className="w-12 h-12 object-cover rounded-full" src="\img\avatar-1.jpg" alt="" />
+              </td>
               <td className="text-center py-4">
                 <a>
                   <i className="fa-solid fa-pen-to-square pr-2 text-green-600"></i>
