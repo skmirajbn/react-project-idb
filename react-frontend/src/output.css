@@ -1666,6 +1666,9 @@ details.collapse summary::-webkit-details-marker{
 .inline-block{
   display: inline-block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
@@ -1728,6 +1731,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .w-full{
   width: 100%;
+}
+.w-1\/2{
+  width: 50%;
 }
 .min-w-full{
   min-width: 100%;
@@ -1954,6 +1960,10 @@ details.collapse summary::-webkit-details-marker{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-gray-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\/img\/hostel-banner\.jpg\'\)\]{
   background-image: url('/img/hostel-banner.jpg');
 }
@@ -2173,6 +2183,10 @@ details.collapse summary::-webkit-details-marker{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+.text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
 .text-green-600{
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
@@ -2188,10 +2202,6 @@ details.collapse summary::-webkit-details-marker{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-gray-800{
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
