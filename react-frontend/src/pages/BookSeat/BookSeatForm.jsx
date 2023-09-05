@@ -2,11 +2,11 @@ import { useParams } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
 function BookSeatForm() {
-  let params = useParams();
-  console.log(params);
+  let { id } = useParams();
+  console.log(id);
   return (
     <form>
-      <h3>The params is :</h3>
+      <h3 className="text-4xl">The params is : {id}</h3>
       {/* User info For signup */}
       <div>
         <div>

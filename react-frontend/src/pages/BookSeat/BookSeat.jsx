@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 
@@ -21,9 +22,11 @@ function BookSeat() {
                   <i className="fa-solid fa-location-dot"></i> Momotaz Plaza, Dhanmondi, Dhaka
                 </h4>
                 <div className="w-full flex justify-center">
-                  <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
-                    Select Branch <i className="fa-solid fa-chevron-right"></i>
-                  </Button>
+                  <Link to="/book-seat/1">
+                    <Button className="bg-blue-500 px-6 leading-8 text-white rounded-full">
+                      Select Branch <i className="fa-solid fa-chevron-right"></i>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </MotionWrapScale>
