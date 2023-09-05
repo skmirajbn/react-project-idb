@@ -5,7 +5,6 @@ import MotionWrapScale from "./motionWrap/MotionWrapScale";
 
 function Header() {
   useEffect(() => {}, []);
-  console.log("header rended");
 
   const transition = {
     transitionTimingFunction: "transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);",
