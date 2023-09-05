@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
-import BookSeat from "./pages/BookSeat/BookSeat";
-import BookSeatForm from "./pages/BookSeat/BookSeatForm";
+import BookBranch from "./pages/Bookings/BookBranch";
+import BookSeatForm from "./pages/Bookings/BookSeatForm";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import DashboardSummary from "./pages/Dashboard/DashboardSummary/DashboardSummary";
 import MemberAdd from "./pages/Dashboard/Members/MemberAdd";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "branch",
-        element: <BookSeat />,
+        element: <BookBranch />,
       },
       {
         path: "book-seat",

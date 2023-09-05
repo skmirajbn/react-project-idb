@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 
 /* eslint-disable react/no-unescaped-entities */
-function BookSeat() {
+function BookBranch() {
   return (
     <div className="py-10">
       <div className="container space-y-6">
@@ -112,4 +112,4 @@ function BookSeat() {
   );
 }
 
-export default BookSeat;
+export default BookBranch;
