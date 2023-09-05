@@ -55,26 +55,23 @@ function BookSeatForm() {
           </div>
           {/* Booking */}
           <div className="w-1/2 text-lg space-y-4">
-            <h3 className="text-2xl font-bold">Choose Seat</h3>
+            <h3 className="text-2xl font-bold">Book Seat</h3>
             <div className="space-y-2">
               <label className=" font-medium">Pakage</label>
               <br />
-              <select className="w-full border-2 border-slate-300 rounded-md p-2" name="" id="">
-                <option value="">Select Pakage</option>
-                <option value="">3 days</option>
-                <option value="">7 days</option>
-                <option value="">30 days</option>
-              </select>
+              <div className="grid grid-cols-2 w-72 bg-slate-200 p-6 rounded-md gap-6">
+                <h4 className="bg-white w-fit py-2 px-4 rounded-md ">3 days</h4>
+                <h4 className="bg-white w-fit py-2 px-4 rounded-md ">7 days</h4>
+                <h4 className="bg-white w-fit py-2 px-4 rounded-md ">30 days</h4>
+              </div>
             </div>
             <div className="space-y-2">
               <label className=" font-medium">Branch</label>
-              <br />
-              <select className="w-full border-2 border-slate-300 rounded-md p-2" name="" id="">
-                <option value="">Select Branch</option>
-                <option value="">Dhanmondi</option>
-                <option value="">Motijheel</option>
-                <option value="">Uttara</option>
-              </select>
+              <div className="w-60 relative z-0 rounded-md overflow-hidden">
+                <h3 className="absolute text-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 font-medium text-2xl">Dhanmondi</h3>
+                <div className="bg-black absolute left-0 right-0 top-0 bottom-0 opacity-40"></div>
+                <img className="" src="/img/hostel-1.png" />
+              </div>
             </div>
             <div className="space-y-2">
               <label className="font-medium">Room</label>
@@ -88,13 +85,12 @@ function BookSeatForm() {
             </div>
             <div className="space-y-2">
               <label className=" font-medium">Bed</label>
-              <br />
-              <select className="w-full border-2 border-slate-300 rounded-md p-2" name="" id="">
-                <option value="">Select availabe Bed</option>
-                <option value="">Bed-2</option>
-                <option value="">Bed-3</option>
-                <option value="">Bed-4</option>
-              </select>
+              <div className="bg-slate-100 grid grid-cols-2 gap-4 p-6 w-80 rounded-md">
+                <div className="bg-white w-fit py-2 px-4 rounded-md justify-self-center">Seat-1</div>
+                <div className="bg-gray-300 w-fit py-2 px-4 rounded-md justify-self-center">Seat-2</div>
+                <div className="bg-gray-300 w-fit py-2 px-4 rounded-md justify-self-center">Seat-3</div>
+                <div className="bg-gray-300 w-fit py-2 px-4 rounded-md justify-self-center">Seat-4</div>
+              </div>
             </div>
           </div>
         </div>
