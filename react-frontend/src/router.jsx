@@ -25,7 +25,11 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "book-seat",
+        path: "select-branch",
+        element: <BookSeat />,
+      },
+      {
+        path: "book-seat-form",
         element: <BookSeat />,
       },
       {

@@ -46,7 +46,7 @@ function Header() {
             </NavLink>
             <div className="inline-block">
               <MotionWrapScale>
-                <NavLink className="bg-orange-500 py-[6px] px-6 rounded-full" to="/book-seat">
+                <NavLink className="bg-orange-500 py-[6px] px-6 rounded-full" to="/select-branch">
                   Book a Seat
                 </NavLink>
               </MotionWrapScale>
