@@ -34,12 +34,16 @@ function CreateAccount() {
     fetch(environment.apiUrl + "users/createAccount.php", {
       method: "POST",
       body: formData,
-    }).then((response) => {
-      if (!response.ok) {
-        throw new Error("Netowrk respose was not ok");
-      }
-      console.log(response);
-    });
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Netowrk respose was not ok");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
