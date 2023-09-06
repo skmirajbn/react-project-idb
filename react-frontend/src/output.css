@@ -1677,6 +1677,12 @@ details.collapse summary::-webkit-details-marker{
 .mt-4{
   margin-top: 1rem;
 }
+.mr-4{
+  margin-right: 1rem;
+}
+.mr-6{
+  margin-right: 1.5rem;
+}
 .block{
   display: block;
 }

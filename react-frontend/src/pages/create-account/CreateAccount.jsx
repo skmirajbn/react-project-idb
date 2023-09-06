@@ -109,7 +109,7 @@ function CreateAccount() {
                         Upload Your Photo <i className="fa-solid fa-image-portrait"></i>
                       </label>
 
-                      <input className="w-72" type="file" onChange={handlePhotoChange} />
+                      <input className="mr-6" type="file" onChange={handlePhotoChange} />
                     </div>
                     <div>
                       <img className="w-32 h-32 object-cover  bg-gray-300" src="img/avatar.webp" alt="" ref={photoRender} />
