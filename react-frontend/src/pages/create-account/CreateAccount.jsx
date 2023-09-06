@@ -4,14 +4,39 @@ import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 
 function CreateAccount() {
-  const [formData, setFormData] = useState();
+  const [formValues, setformValues] = useState({
+    name: "",
+    email: "",
+    username: "",
+    password: "",
+    phone: "",
+    nid: "",
+  });
 
-  const handleInput = () => {};
+  const handleInput = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    setformValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log("clicked");
+    const formData = new FormData();
+    Object.keys(formValues).forEach((key) => {
+      formData.append(key, formValues[key]);
+    });
+    console.log(formData);
+    // Calling the api
+  };
 
   return (
     <div className="bg-blue-300">
       <div className="container">
-        <form>
+        <form onSubmit={submitForm}>
           <section id="web-job-category" className="">
             <MotionWrapScale>
               <div className=" py-12 px-12 rounded-md   flex justify-center items-center text-gray-800">
@@ -22,20 +47,20 @@ function CreateAccount() {
                     <div className="flex flex-col space-y-6">
                       <div className="space-y-2">
                         <h4 className="text-md">Name</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} name="name" value={formValues.name} />
                       </div>
 
                       <div className="space-y-2">
                         <h4 className="text-md">Email</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Email" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Email" onChange={handleInput} name="email" value={formValues.email} />
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Choose Username</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create username" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create username" onChange={handleInput} name="username" value={formValues.username} />
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Enter Password</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create password" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create password" onChange={handleInput} name="password" value={formValues.password} />
                       </div>
                     </div>
                     <div className="flex flex-col space-y-6">
@@ -45,20 +70,18 @@ function CreateAccount() {
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Enter Phone Number</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Phone Number" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Phone Number" onChange={handleInput} name="phone" value={formValues.phone} />
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Enter NID Number</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter NID Number" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter NID Number" onChange={handleInput} name="nid" value={formValues.nid} />
                       </div>
                     </div>
                   </div>
 
                   <div className="">
-                    <Button className="mx-auto block">
-                      <Link to="/dashboard" className="bg-blue-500 px-6 py-1 rounded-full text-white">
-                        Login
-                      </Link>
+                    <Button type="submit" className="bg-blue-500 px-6 py-1 rounded-full text-white mx-auto block">
+                      Create Account
                     </Button>
                   </div>
 
