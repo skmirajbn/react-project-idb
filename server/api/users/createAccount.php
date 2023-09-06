@@ -8,6 +8,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username'])
     $phone = $_POST['phone'];
     $nid = $_POST['nid'];
 
+    $sql = "";
     $query = $con->query($sql);
 }
 

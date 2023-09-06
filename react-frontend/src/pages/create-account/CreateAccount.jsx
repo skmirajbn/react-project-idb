@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
@@ -13,6 +13,18 @@ function CreateAccount() {
     phone: "",
     nid: "",
   });
+  const photoRender = useRef();
+  const handlePhotoChange = (e) => {
+    const file = e.target.files[0];
+
+    formData.append("photo", file);
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      photoRender.current.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  };
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -23,9 +35,9 @@ function CreateAccount() {
     });
   };
 
+  const formData = new FormData();
   const submitForm = (e) => {
     e.preventDefault();
-    const formData = new FormData();
     Object.keys(formValues).forEach((key) => {
       formData.append(key, formValues[key]);
     });
@@ -52,12 +64,12 @@ function CreateAccount() {
         <form onSubmit={submitForm}>
           <section id="web-job-category" className="">
             <MotionWrapScale>
-              <div className=" py-12 px-12 rounded-md   flex justify-center items-center text-gray-800">
-                <div className=" bg-blue-100 rounded-lg py-10 px-10 space-y-6 shadow-xl">
-                  <h3 className="text-2xl text-center font-bold ">Create Account</h3>
+              <div className=" py-12 rounded-md  flex justify-center items-center text-gray-800">
+                <div className=" bg-blue-100 rounded-lg py-10 px-16 space-y-10 shadow-xl w-full">
+                  <h3 className="text-2xl text-center font-bold">Create Account</h3>
 
-                  <div className="flex gap-6">
-                    <div className="flex flex-col space-y-6">
+                  <div className="flex gap-12">
+                    <div className="flex flex-col space-y-6 w-1/2">
                       <div className="space-y-2">
                         <h4 className="text-md">Name</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} name="name" value={formValues.name} />
@@ -76,7 +88,7 @@ function CreateAccount() {
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create password" onChange={handleInput} name="password" value={formValues.password} />
                       </div>
                     </div>
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-6 w-1/2">
                       <div className="space-y-2">
                         <h4 className="text-md">Confirm Password</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Confirm password" />
@@ -91,9 +103,19 @@ function CreateAccount() {
                       </div>
                     </div>
                   </div>
+                  <div className="flex">
+                    <div className="text-lg flex flex-col gap-2">
+                      <label>Select Photo</label>
+
+                      <input className="w-72" type="file" onChange={handlePhotoChange} />
+                    </div>
+                    <div>
+                      <img className="w-32 h-32 object-cover  bg-gray-300" src="img/avatar.webp" alt="" ref={photoRender} />
+                    </div>
+                  </div>
 
                   <div className="">
-                    <Button type="submit" className="bg-blue-500 px-6 py-1 rounded-full text-white mx-auto block">
+                    <Button type="submit" className="bg-blue-500 px-6 py-2 rounded-full text-white mx-auto block">
                       Create Account
                     </Button>
                   </div>
@@ -101,7 +123,7 @@ function CreateAccount() {
                   <div className="flex justify-between items-center">
                     <h3 className="text-gray-600">Already Have Account?</h3>
 
-                    <Link to="/create-account" className="bg-orange-600 text-white px-4 py-1 rounded-full">
+                    <Link to="/create-account" className="bg-orange-600 text-white px-8 py-3 rounded-full">
                       Sign In
                     </Link>
                   </div>
