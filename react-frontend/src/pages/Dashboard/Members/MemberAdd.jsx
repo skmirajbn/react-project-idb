@@ -1,6 +1,9 @@
 function MemberAdd() {
   return (
-    <div className="text-gray-700 gap-y-3">
+    <div className="text-gray-700 space-y-6 lg:px-20">
+      <h3 className="text-2xl font-medium">
+        Member Add <i className="fa-solid fa-user-plus"></i>
+      </h3>
       <form className="space-y-4">
         <div className="flex flex-col">
           <label className="text-lg">Name :</label>
@@ -25,8 +28,8 @@ function MemberAdd() {
               Select Role
             </option>
             <option value="1">Admin</option>
-            <option value="2">Admin</option>
-            <option value="3">Admin</option>
+            <option value="2">Member</option>
+            <option value="2">Auditor</option>
           </select>
         </div>
         <div className="flex flex-col">
