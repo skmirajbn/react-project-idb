@@ -105,7 +105,9 @@ function CreateAccount() {
                   </div>
                   <div className="flex">
                     <div className="text-lg flex flex-col gap-2">
-                      <label>Select Photo</label>
+                      <label>
+                        Upload Your Photo <i className="fa-solid fa-image-portrait"></i>
+                      </label>
 
                       <input className="w-72" type="file" onChange={handlePhotoChange} />
                     </div>
