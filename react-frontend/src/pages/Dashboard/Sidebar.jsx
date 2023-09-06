@@ -9,7 +9,7 @@ function Sidebar() {
             <i className="fa-solid fa-bars"></i> Control Panel
           </h2>
           <Link className="block" to="/dashboard">
-            <h2 className="text-lg bg-cyan-700 px-2 py-1 text-white rounded-md w-fit">
+            <h2 className="text-lg bg-blue-500 px-2 py-1 text-white rounded-md w-fit ">
               <i className="fa-solid fa-ticket"></i> Dashboard
             </h2>
           </Link>

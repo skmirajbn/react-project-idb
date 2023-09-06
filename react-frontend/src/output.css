@@ -2052,6 +2052,10 @@ details.collapse summary::-webkit-details-marker{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-cyan-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+}
 .bg-\[url\(\'\/img\/hostel-banner\.jpg\'\)\]{
   background-image: url('/img/hostel-banner.jpg');
 }
