@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
+import environment from "../../environment/environment";
 
 function CreateAccount() {
   const [formValues, setformValues] = useState({
@@ -24,13 +25,21 @@ function CreateAccount() {
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log("clicked");
     const formData = new FormData();
     Object.keys(formValues).forEach((key) => {
       formData.append(key, formValues[key]);
     });
     console.log(formData);
     // Calling the api
+    fetch(environment.apiUrl + "users/createAccount.php", {
+      method: "POST",
+      body: formData,
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error("Netowrk respose was not ok");
+      }
+      console.log(response);
+    });
   };
 
   return (

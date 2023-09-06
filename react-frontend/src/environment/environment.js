@@ -1,5 +1,5 @@
 const environment = {
-  apiUrl: "https://api.example.com",
+  apiUrl: "http://localhost/React%20Project/react-project-idb/server/api/",
 };
 
 export default environment;
