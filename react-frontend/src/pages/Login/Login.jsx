@@ -33,7 +33,9 @@ export default function Login() {
                   <div className="flex justify-between items-center">
                     <h3 className="text-gray-600">Forgot Password?</h3>
 
-                    <a className="bg-orange-600 text-white px-4 py-1 rounded-full">Create Account</a>
+                    <Link to="/create-account" className="bg-orange-600 text-white px-4 py-1 rounded-full">
+                      Create Account
+                    </Link>
                   </div>
                 </div>
               </div>

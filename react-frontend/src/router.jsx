@@ -10,6 +10,7 @@ import MemberView from "./pages/Dashboard/Members/MemberView";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Page404 from "./pages/Page404";
+import CreateAccount from "./pages/create-account/CreateAccount";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "create-account",
+        element: <CreateAccount />,
       },
       {
         path: "branch",
