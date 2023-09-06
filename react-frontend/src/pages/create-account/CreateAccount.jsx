@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 
 function CreateAccount() {
+  const [formData, setFormData] = useState();
+
+  const handleInput = () => {};
+
   return (
     <div className="bg-blue-300">
       <div className="container">
@@ -17,7 +22,7 @@ function CreateAccount() {
                     <div className="flex flex-col space-y-6">
                       <div className="space-y-2">
                         <h4 className="text-md">Name</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" />
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} />
                       </div>
 
                       <div className="space-y-2">
