@@ -14,10 +14,10 @@ function BookSeatForm() {
       <div className="space-y-3">
         <h3 className="text-xl bg-orange-600 text-white px-6 py-2 w-fit rounded-full mx-auto">Login</h3>
         <h3 className="text-xl bg-blue-700 text-white px-6 py-2 w-fit rounded-full mx-auto">
-          <i className="fa-brands fa-square-facebook"></i> Login with <span className=" font-bold">Facebook</span>{" "}
+          <i className="fa-brands fa-square-facebook"></i> Login with <span className=" font-bold">Facebook</span>
         </h3>
         <h3 className="text-xl bg-orange-800 text-white px-6 py-2 w-fit rounded-full mx-auto">
-          <i className="fa-brands fa-google"></i> Login with <span className=" font-bold">Google</span>{" "}
+          <i className="fa-brands fa-google"></i> Login with <span className=" font-bold">Google</span>
         </h3>
         <h4 className="text-2xl text-center font-bold">Or</h4>
       </div>

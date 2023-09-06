@@ -19,7 +19,7 @@ function MemberAdd() {
         </div>
         <div className="flex flex-col space-y-2">
           <label className="text-lg">Password :</label>
-          <input className="border-2 border-blue-200 px-2 rounded-md py-2" type="text" placeholder="Enter Password" name="password" />
+          <input className="border-2 border-blue-200 px-2 rounded-md py-2" type="password" placeholder="Enter Password" name="password" />
         </div>
         <div className="flex flex-col space-y-2">
           <label className="text-lg">Role :</label>
@@ -38,7 +38,7 @@ function MemberAdd() {
         </div>
         <h2 className="text-center text-2xl text-green-700"> </h2>
         <h2 className="text-center text-2xl text-green-700"></h2>
-        <button className="block mx-auto bg-cyan-700 text-white py-2 px-4 rounded-md">
+        <button className="block mx-auto bg-blue-500 text-white py-2 px-4 rounded-md">
           <i className="fa-solid fa-plus"></i> Add User
         </button>
       </form>
