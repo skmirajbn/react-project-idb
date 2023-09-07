@@ -7,12 +7,13 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username'])
     $password = $_POST['password'];
     $phone = $_POST['phone'];
     $nid = $_POST['nid'];
-    $photo = $_FILES['photo']['name'];
-    $photoTempName = $_FILES['photo']['tmp_name'];
 
 
 
-    if ($photo != '') {
+
+    if (isset($_FILES['photo'])) {
+        $photo = $_FILES['photo']['name'];
+        $photoTempName = $_FILES['photo']['tmp_name'];
         $imageName = 'user_' . time() . '_' . rand(100000, 10000000) . '.' . pathinfo($photo, PATHINFO_EXTENSION);
         move_uploaded_file($photoTempName, './../../img/' . $imageName);
 
