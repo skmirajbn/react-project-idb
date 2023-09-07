@@ -1671,17 +1671,14 @@ details.collapse summary::-webkit-details-marker{
 .mr-3{
   margin-right: 0.75rem;
 }
+.mr-6{
+  margin-right: 1.5rem;
+}
 .mt-10{
   margin-top: 2.5rem;
 }
 .mt-4{
   margin-top: 1rem;
-}
-.mr-4{
-  margin-right: 1rem;
-}
-.mr-6{
-  margin-right: 1.5rem;
 }
 .block{
   display: block;
@@ -1780,9 +1777,6 @@ details.collapse summary::-webkit-details-marker{
 .w-full{
   width: 100%;
 }
-.w-44{
-  width: 11rem;
-}
 .min-w-full{
   min-width: 100%;
 }
@@ -1853,8 +1847,14 @@ details.collapse summary::-webkit-details-marker{
 .gap-10{
   gap: 2.5rem;
 }
+.gap-12{
+  gap: 3rem;
+}
 .gap-16{
   gap: 4rem;
+}
+.gap-2{
+  gap: 0.5rem;
 }
 .gap-3{
   gap: 0.75rem;
@@ -1864,12 +1864,6 @@ details.collapse summary::-webkit-details-marker{
 }
 .gap-6{
   gap: 1.5rem;
-}
-.gap-2{
-  gap: 0.5rem;
-}
-.gap-12{
-  gap: 3rem;
 }
 .gap-y-3{
   row-gap: 0.75rem;
@@ -2136,6 +2130,10 @@ details.collapse summary::-webkit-details-marker{
   padding-left: 3rem;
   padding-right: 3rem;
 }
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2155,6 +2153,10 @@ details.collapse summary::-webkit-details-marker{
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .py-1{
   padding-top: 0.25rem;
@@ -2176,6 +2178,10 @@ details.collapse summary::-webkit-details-marker{
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2195,22 +2201,6 @@ details.collapse summary::-webkit-details-marker{
 .py-\[6px\]{
   padding-top: 6px;
   padding-bottom: 6px;
-}
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 .pb-12{
   padding-bottom: 3rem;

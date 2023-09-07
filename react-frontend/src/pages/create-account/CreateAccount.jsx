@@ -14,11 +14,11 @@ function CreateAccount() {
     nid: "",
   });
   const photoRender = useRef();
+  const photoInput = useRef();
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
 
-    formData.append("photo", file);
-
+    // Showing the file to the placeholder
     const reader = new FileReader();
     reader.onload = function (e) {
       photoRender.current.src = e.target.result;
@@ -41,6 +41,10 @@ function CreateAccount() {
     Object.keys(formValues).forEach((key) => {
       formData.append(key, formValues[key]);
     });
+    // Appending the image file
+    const file = photoInput.current.files[0];
+    formData.append("photo", file);
+
     console.log(formData);
     // Calling the api
     fetch(environment.apiUrl + "users/createAccount.php", {
@@ -109,7 +113,7 @@ function CreateAccount() {
                         Upload Your Photo <i className="fa-solid fa-image-portrait"></i>
                       </label>
 
-                      <input className="mr-6" type="file" onChange={handlePhotoChange} />
+                      <input className="mr-6" type="file" onChange={handlePhotoChange} ref={photoInput} />
                     </div>
                     <div>
                       <img className="w-32 h-32 object-cover  bg-gray-300" src="img/avatar.webp" alt="" ref={photoRender} />
