@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import environment from "../environment/environment";
 
-const useFormSubmit = function ({ required, email, phone }) {
+const useFormSubmit = function ({ required, email, phone, number }) {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
   const [formValues, setformValues] = useState({});
@@ -81,6 +81,12 @@ const useFormSubmit = function ({ required, email, phone }) {
         validatePhone(phoneFieldname, value);
       }
     });
+    // Validating Number
+    number.forEach((numberFieldname) => {
+      if (numberFieldname == name) {
+        validateNumber(numberFieldname, value);
+      }
+    });
   };
 
   //   Form Validation Functions
@@ -130,6 +136,25 @@ const useFormSubmit = function ({ required, email, phone }) {
         return {
           ...prev,
           [inputName]: `your input "${value}" number not a valid Phone number`,
+        };
+      });
+    } else {
+      setErrorMessage((prev) => {
+        let errorMessageCopy = { ...prev };
+        delete errorMessageCopy[inputName];
+        return errorMessageCopy;
+      });
+    }
+  };
+
+  // Bd Phone Number Validation
+  const validateNumber = (inputName, value) => {
+    let reg = /^[0-9]+$/;
+    if (!reg.test(value)) {
+      setErrorMessage((prev) => {
+        return {
+          ...prev,
+          [inputName]: `your input "${value}" is not a number`,
         };
       });
     } else {

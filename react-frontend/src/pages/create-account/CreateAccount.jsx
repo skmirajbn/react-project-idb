@@ -8,6 +8,7 @@ function CreateAccount() {
     required: ["name", "username"],
     email: ["email"],
     phone: ["phone"],
+    number: ["nid"],
   });
   console.log(isValid);
   return (
@@ -55,6 +56,7 @@ function CreateAccount() {
                       <div className="space-y-2">
                         <h4 className="text-md">Enter NID Number</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter NID Number" onChange={handleInput} name="nid" value={formValues.nid} />
+                        <div className="text-red-600 italic">{errorMessage?.nid}</div>
                       </div>
                     </div>
                   </div>
