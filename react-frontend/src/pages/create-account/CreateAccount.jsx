@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
+import environment from "../../environment/environment";
 import useFormSubmit from "../../hooks/useFormSubmit";
 
 function CreateAccount() {
-  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit({
-    required: ["name", "username"],
-    email: ["email"],
-    phone: ["phone"],
-    number: ["nid"],
-  });
+  let apiUrl = environment.apiUrl + "users/createAccount.php";
+  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
+    {
+      required: ["name", "username"],
+      email: ["email"],
+      phone: ["phone"],
+      number: ["nid"],
+    },
+    apiUrl
+  );
   console.log(isValid);
   return (
     <div className="bg-blue-300">
