@@ -1,15 +1,24 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 import useFormSubmit from "../../hooks/useFormSubmit";
 
 function CreateAccount() {
-  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues } = useFormSubmit();
-
+  const formRef = useRef();
+  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
+    {
+      required: ["name", "username"],
+      email: ["email"],
+      phone: ["phone"],
+    },
+    formRef
+  );
+  console.log(isValid);
   return (
     <div className="bg-blue-300">
       <div className="container">
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} id="create-account-form" ref={formRef}>
           <section id="web-job-category" className="">
             <MotionWrapScale>
               <div className=" py-12 rounded-md  flex justify-center items-center text-gray-800">
@@ -21,11 +30,13 @@ function CreateAccount() {
                       <div className="space-y-2">
                         <h4 className="text-md">Name</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} name="name" value={formValues.name} />
+                        <div className="text-red-600 italic">{errorMessage?.name}</div>
                       </div>
 
                       <div className="space-y-2">
                         <h4 className="text-md">Email</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Email" onChange={handleInput} name="email" value={formValues.email} />
+                        <div className="text-red-600 italic">{errorMessage?.email}</div>
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Choose Username</h4>
@@ -44,6 +55,7 @@ function CreateAccount() {
                       <div className="space-y-2">
                         <h4 className="text-md">Enter Phone Number</h4>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Phone Number" onChange={handleInput} name="phone" value={formValues.phone} />
+                        <div className="text-red-600 italic">{errorMessage?.phone}</div>
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Enter NID Number</h4>
@@ -69,7 +81,11 @@ function CreateAccount() {
                       Create Account
                     </Button>
                     {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
-                    {message && <div className="text-green-600 text-xl text-center py-2">{message}</div>}
+                    {message && (
+                      <div className="text-green-600 text-xl text-center py-2" style={!isValid ? { color: "red" } : {}}>
+                        {message}
+                      </div>
+                    )}
                   </div>
 
                   <div className="flex justify-between items-center">
