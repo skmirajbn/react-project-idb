@@ -5,6 +5,8 @@ import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 import environment from "../../environment/environment";
 
 function CreateAccount() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState(null);
   const [formValues, setformValues] = useState({
     name: "",
     email: "",
@@ -37,6 +39,8 @@ function CreateAccount() {
 
   const formData = new FormData();
   const submitForm = (e) => {
+    setMessage(null);
+    setIsLoading(true);
     e.preventDefault();
     Object.keys(formValues).forEach((key) => {
       formData.append(key, formValues[key]);
@@ -59,6 +63,8 @@ function CreateAccount() {
       })
       .then((data) => {
         console.log(data);
+        setIsLoading(false);
+        setMessage(data);
       });
   };
 
@@ -124,6 +130,8 @@ function CreateAccount() {
                     <Button type="submit" className="bg-blue-500 px-6 py-2 rounded-full text-white mx-auto block">
                       Create Account
                     </Button>
+                    {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
+                    {message && <div className="text-green-600 text-xl text-center py-2">{message}</div>}
                   </div>
 
                   <div className="flex justify-between items-center">
