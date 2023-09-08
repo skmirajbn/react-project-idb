@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import environment from "../environment/environment";
 
-const useFormSubmit = function ({ required, email, phone }, formRef) {
+const useFormSubmit = function ({ required, email, phone }) {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
   const [formValues, setformValues] = useState({});
@@ -16,7 +16,22 @@ const useFormSubmit = function ({ required, email, phone }, formRef) {
   //   Changing isValid true or false
   useEffect(() => {
     setIsValid(Object.keys(errorMessage).length === 0);
-  }, [errorMessage]);
+    required.forEach((req) => {
+      if (formValues[req] == undefined) {
+        setIsValid(false);
+      }
+    });
+    email.forEach((em) => {
+      if (formValues[em] == undefined) {
+        setIsValid(false);
+      }
+    });
+    phone.forEach((ph) => {
+      if (formValues[ph] == undefined) {
+        setIsValid(false);
+      }
+    });
+  }, [errorMessage, required, phone, email, formValues]);
 
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
@@ -30,6 +45,7 @@ const useFormSubmit = function ({ required, email, phone }, formRef) {
   };
 
   const handleInput = (e) => {
+    setMessage(null);
     // Removing Initial Error of Form
     setErrorMessage((prev) => {
       let errorMessage = { ...prev };
@@ -129,7 +145,6 @@ const useFormSubmit = function ({ required, email, phone }, formRef) {
   const formData = new FormData();
   const submitForm = (e) => {
     e.preventDefault();
-    console.log("isValid is " + isValid);
     if (!isValid) {
       setMessage("Form is Not Valid");
       return;

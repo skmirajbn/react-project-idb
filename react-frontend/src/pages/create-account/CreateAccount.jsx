@@ -1,24 +1,19 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import MotionWrapScale from "../../components/motionWrap/MotionWrapScale";
 import useFormSubmit from "../../hooks/useFormSubmit";
 
 function CreateAccount() {
-  const formRef = useRef();
-  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
-    {
-      required: ["name", "username"],
-      email: ["email"],
-      phone: ["phone"],
-    },
-    formRef
-  );
+  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit({
+    required: ["name", "username"],
+    email: ["email"],
+    phone: ["phone"],
+  });
   console.log(isValid);
   return (
     <div className="bg-blue-300">
       <div className="container">
-        <form onSubmit={submitForm} id="create-account-form" ref={formRef}>
+        <form onSubmit={submitForm} id="create-account-form">
           <section id="web-job-category" className="">
             <MotionWrapScale>
               <div className=" py-12 rounded-md  flex justify-center items-center text-gray-800">
