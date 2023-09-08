@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import environment from "../environment/environment";
 
-const useFormSubmit = function ({ required, email, phone, number }) {
+const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
   const [formValues, setformValues] = useState({});
@@ -16,21 +15,27 @@ const useFormSubmit = function ({ required, email, phone, number }) {
   //   Changing isValid true or false
   useEffect(() => {
     setIsValid(Object.keys(errorMessage).length === 0);
-    required.forEach((req) => {
-      if (formValues[req] == undefined) {
-        setIsValid(false);
-      }
-    });
-    email.forEach((em) => {
-      if (formValues[em] == undefined) {
-        setIsValid(false);
-      }
-    });
-    phone.forEach((ph) => {
-      if (formValues[ph] == undefined) {
-        setIsValid(false);
-      }
-    });
+    if (required) {
+      required.forEach((req) => {
+        if (formValues[req] == undefined) {
+          setIsValid(false);
+        }
+      });
+    }
+    if (email) {
+      email.forEach((em) => {
+        if (formValues[em] == undefined) {
+          setIsValid(false);
+        }
+      });
+    }
+    if (phone) {
+      phone.forEach((ph) => {
+        if (formValues[ph] == undefined) {
+          setIsValid(false);
+        }
+      });
+    }
   }, [errorMessage, required, phone, email, formValues]);
 
   const handlePhotoChange = (e) => {
@@ -64,29 +69,37 @@ const useFormSubmit = function ({ required, email, phone, number }) {
 
     // FormValidation Verification
     // Validating Requireds
-    required.forEach((requiredFieldname) => {
-      if (requiredFieldname == name) {
-        validateRequired(requiredFieldname, value);
-      }
-    });
+    if (required) {
+      required.forEach((requiredFieldname) => {
+        if (requiredFieldname == name) {
+          validateRequired(requiredFieldname, value);
+        }
+      });
+    }
     // Validating Email
-    email.forEach((emailFieldname) => {
-      if (emailFieldname == name) {
-        validateEmail(emailFieldname, value);
-      }
-    });
+    if (email) {
+      email.forEach((emailFieldname) => {
+        if (emailFieldname == name) {
+          validateEmail(emailFieldname, value);
+        }
+      });
+    }
     // Validating Phone
-    phone.forEach((phoneFieldname) => {
-      if (phoneFieldname == name) {
-        validatePhone(phoneFieldname, value);
-      }
-    });
+    if (phone) {
+      phone.forEach((phoneFieldname) => {
+        if (phoneFieldname == name) {
+          validatePhone(phoneFieldname, value);
+        }
+      });
+    }
     // Validating Number
-    number.forEach((numberFieldname) => {
-      if (numberFieldname == name) {
-        validateNumber(numberFieldname, value);
-      }
-    });
+    if (number) {
+      number.forEach((numberFieldname) => {
+        if (numberFieldname == name) {
+          validateNumber(numberFieldname, value);
+        }
+      });
+    }
   };
 
   //   Form Validation Functions
@@ -170,6 +183,7 @@ const useFormSubmit = function ({ required, email, phone, number }) {
   const formData = new FormData();
   const submitForm = (e) => {
     e.preventDefault();
+    console.log("calling api");
     if (!isValid) {
       setMessage("Form is Not Valid");
       return;
@@ -181,11 +195,13 @@ const useFormSubmit = function ({ required, email, phone, number }) {
       formData.append(key, formValues[key]);
     });
     // Appending the image file
-    const file = photoInput.current.files[0];
-    formData.append("photo", file);
+    if (photoInput.current && photoInput.current.files.length > 0) {
+      const file = photoInput.current.files[0];
+      formData.append("photo", file);
+    }
 
     // Calling the api
-    fetch(environment.apiUrl + "users/createAccount.php", {
+    fetch(apiUrl, {
       method: "POST",
       body: formData,
     })

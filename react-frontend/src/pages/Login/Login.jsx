@@ -1,33 +1,47 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
+import environment from "../../environment/environment";
+import useFormSubmit from "../../hooks/useFormSubmit";
 import Button from "./../../components/Button";
 import MotionWrapScale from "./../../components/motionWrap/MotionWrapScale";
+
 export default function Login() {
+  let apiUrl = environment.apiUrl + "users/createAccount.php";
+  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
+    {
+      required: ["password", "username"],
+    },
+    apiUrl
+  );
+
   return (
     <div className="bg-blue-300">
       <div className="container">
-        <form>
+        <form onSubmit={submitForm}>
           <section id="web-job-category" className="">
             <MotionWrapScale>
-              <div className=" py-6 px-12 rounded-md  h-[82vh] flex justify-center items-center text-gray-800">
-                <div className="h-[420px] w-96 bg-blue-100 rounded-lg py-10 px-10 space-y-6 shadow-xl">
+              <div className=" py-20 px-12 rounded-md  flex justify-center items-center text-gray-800">
+                <div className=" w-96 bg-blue-100 rounded-lg py-10 px-10 space-y-6 shadow-xl">
                   <h3 className="text-2xl text-center font-bold ">Sign In</h3>
 
                   <div className="space-y-2">
                     <h4 className="text-md">Username</h4>
-                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Username" />
+                    <div className="text-red-600 italic">{errorMessage?.username}</div>
+                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Username" name="username" onChange={handleInput} value={formValues.username} />
                   </div>
 
                   <div className="space-y-2">
                     <h4 className="text-md">Password</h4>
-                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Password" />
+                    <div className="text-red-600 italic">{errorMessage?.password}</div>
+                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="password" placeholder="Enter Your Password" name="password" onChange={handleInput} value={formValues.password} />
                   </div>
 
                   <div className="">
-                    <Button className="mx-auto block">
-                      <Link to="/dashboard" className="bg-blue-500 px-6 py-1 rounded-full text-white">
-                        Login
-                      </Link>
-                    </Button>
+                    <Button className="mx-auto block bg-blue-500 px-6 py-1 rounded-full text-white">Login</Button>
+                    {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
+                    <div className="text-green-600 text-xl text-center py-2" style={!isValid ? { color: "red" } : {}}>
+                      {message}
+                    </div>
                   </div>
 
                   <div className="flex justify-between items-center">
