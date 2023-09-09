@@ -1,19 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import environment from "../../environment/environment";
 import useFormSubmit from "../../hooks/useFormSubmit";
 import Button from "./../../components/Button";
 import MotionWrapScale from "./../../components/motionWrap/MotionWrapScale";
 
 export default function Login() {
-  let apiUrl = environment.apiUrl + "users/createAccount.php";
+  let apiUrl = environment.apiUrl + "login.php";
   const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
     {
       required: ["password", "username"],
     },
     apiUrl
   );
-
+  const navigate = useNavigate();
+  let LoginMessage = "";
+  if (message) {
+    let data = JSON.parse(message);
+    if (data.login === "Success") {
+      localStorage.setItem("serverInfo", message);
+      navigate("/dashboard");
+    }
+    if (data.login === "Failed") {
+      LoginMessage = "Username or Password is incorrect";
+    }
+    console.log(data);
+  }
   return (
     <div className="bg-blue-300">
       <div className="container">
@@ -39,8 +51,8 @@ export default function Login() {
                   <div className="">
                     <Button className="mx-auto block bg-blue-500 px-6 py-1 rounded-full text-white">Login</Button>
                     {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
-                    <div className="text-green-600 text-xl text-center py-2" style={!isValid ? { color: "red" } : {}}>
-                      {message}
+                    <div className="text-green-600 text-xl text-center py-2 text-red-600" style={!isValid ? { color: "red" } : {}}>
+                      {LoginMessage}
                     </div>
                   </div>
 
