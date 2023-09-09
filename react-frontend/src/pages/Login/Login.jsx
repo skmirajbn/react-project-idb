@@ -15,17 +15,26 @@ export default function Login() {
   );
   const navigate = useNavigate();
   let LoginMessage = "";
-  if (message) {
+  function isValidJSON(str) {
+    try {
+      JSON.parse(str);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  if (isValidJSON(message)) {
     let data = JSON.parse(message);
-    if (data.login === "Success") {
+    if (data?.login === "Success") {
       localStorage.setItem("serverInfo", message);
       navigate("/dashboard");
     }
-    if (data.login === "Failed") {
+    if (data?.login === "Failed") {
       LoginMessage = "Username or Password is incorrect";
     }
     console.log(data);
   }
+
   return (
     <div className="bg-blue-300">
       <div className="container">
@@ -51,7 +60,7 @@ export default function Login() {
                   <div className="">
                     <Button className="mx-auto block bg-blue-500 px-6 py-1 rounded-full text-white">Login</Button>
                     {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
-                    <div className="text-green-600 text-xl text-center py-2 text-red-600" style={!isValid ? { color: "red" } : {}}>
+                    <div className=" text-xl text-center py-2 text-red-600" style={!isValid ? { color: "red" } : {}}>
                       {LoginMessage}
                     </div>
                   </div>

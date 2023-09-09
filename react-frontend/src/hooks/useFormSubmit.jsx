@@ -12,7 +12,7 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
 
   const [errorMessage, setErrorMessage] = useState({});
 
-  //   Changing isValid true or false
+  // Changing isValid true or false
   useEffect(() => {
     setIsValid(Object.keys(errorMessage).length === 0);
     if (required) {
@@ -106,7 +106,7 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
 
   //   Required Validation
   const validateRequired = (inputName, value) => {
-    if (value == "") {
+    if (value == "" || value == undefined) {
       setErrorMessage((prev) => {
         return {
           ...prev,
@@ -125,7 +125,7 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   // Email Validation
   const validateEmail = (inputName, value) => {
     let reg = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
-    if (!reg.test(value)) {
+    if (!reg.test(value) || value == undefined) {
       setErrorMessage((prev) => {
         return {
           ...prev,
@@ -144,7 +144,7 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   // Bd Phone Number Validation
   const validatePhone = (inputName, value) => {
     let reg = /^(?:\+?8801|01)[3456789]\d{8}$/;
-    if (!reg.test(value)) {
+    if (!reg.test(value) || value == undefined) {
       setErrorMessage((prev) => {
         return {
           ...prev,
@@ -163,7 +163,7 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   // Bd Phone Number Validation
   const validateNumber = (inputName, value) => {
     let reg = /^[0-9]+$/;
-    if (!reg.test(value)) {
+    if (!reg.test(value) || value == undefined) {
       setErrorMessage((prev) => {
         return {
           ...prev,
@@ -183,11 +183,18 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   const formData = new FormData();
   const submitForm = (e) => {
     e.preventDefault();
-    console.log("calling api");
+    // Validating Requireds
+    if (required) {
+      required.forEach((requiredFieldname) => {
+        validateRequired(requiredFieldname, formValues[requiredFieldname]);
+      });
+    }
+
     if (!isValid) {
       setMessage("Form is Not Valid");
       return;
     }
+    console.log("calling api");
     setMessage(null);
     setIsLoading(true);
 
@@ -218,33 +225,5 @@ const useFormSubmit = function ({ required, email, phone, number }, apiUrl) {
   };
   return { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage };
 };
-
-// class FormValidator {
-//   constructor(formData) {
-//     this.errorMessage = {};
-//     for (const [key, value] of formData.entries()) {
-//       this[key] = value;
-//     }
-//   }
-//   validateRequired(name) {
-//     const nameInputValue = this[name];
-//     if (nameInputValue == "") {
-//       this.errorMessage[name] = `${name} is required`;
-//     } else {
-//       delete this.errorMessage[name];
-//     }
-//   }
-
-//   isFormValid() {
-//     if (this.errorMessage === {}) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   }
-//   getErrorMessage() {
-//     return this.errorMessage;
-//   }
-// }
 
 export default useFormSubmit;
