@@ -8,14 +8,13 @@ function CreateAccount() {
   let apiUrl = environment.apiUrl + "users/createAccount.php";
   const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
     {
-      required: ["name", "username"],
+      required: ["name", "username", "password"],
       email: ["email"],
       phone: ["phone"],
       number: ["nid"],
     },
     apiUrl
   );
-  console.log(isValid);
   return (
     <div className="bg-blue-300">
       <div className="container">
@@ -30,21 +29,23 @@ function CreateAccount() {
                     <div className="flex flex-col space-y-6 w-1/2">
                       <div className="space-y-2">
                         <h4 className="text-md">Name</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} name="name" value={formValues.name} />
                         <div className="text-red-600 italic">{errorMessage?.name}</div>
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Name" onChange={handleInput} name="name" value={formValues.name} />
                       </div>
 
                       <div className="space-y-2">
                         <h4 className="text-md">Email</h4>
-                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Email" onChange={handleInput} name="email" value={formValues.email} />
                         <div className="text-red-600 italic">{errorMessage?.email}</div>
+                        <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Email" onChange={handleInput} name="email" value={formValues.email} />
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Choose Username</h4>
+                        <div className="text-red-600 italic">{errorMessage?.username}</div>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create username" onChange={handleInput} name="username" value={formValues.username} />
                       </div>
                       <div className="space-y-2">
                         <h4 className="text-md">Enter Password</h4>
+                        <div className="text-red-600 italic">{errorMessage?.password}</div>
                         <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Create password" onChange={handleInput} name="password" value={formValues.password} />
                       </div>
                     </div>

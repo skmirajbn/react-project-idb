@@ -1725,14 +1725,8 @@ details.collapse summary::-webkit-details-marker{
 .h-64{
   height: 16rem;
 }
-.h-\[420px\]{
-  height: 420px;
-}
 .h-\[70vh\]{
   height: 70vh;
-}
-.h-\[82vh\]{
-  height: 82vh;
 }
 .h-full{
   height: 100%;
