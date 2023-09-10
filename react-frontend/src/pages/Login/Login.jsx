@@ -1,44 +1,36 @@
 /* eslint-disable no-unused-vars */
-import { Link, useNavigate } from "react-router-dom";
-import environment from "../../environment/environment";
-import useFormSubmit from "../../hooks/useFormSubmit";
+import { useFormik } from "formik";
+import { Link } from "react-router-dom";
+import useApiCall from "../../hooks/useApiCall";
 import Button from "./../../components/Button";
 import MotionWrapScale from "./../../components/motionWrap/MotionWrapScale";
+import environment from "./../../environment/environment";
+import loginSchema from "./../../schemas/loginSchema";
 
 export default function Login() {
-  let apiUrl = environment.apiUrl + "login.php";
-  const { submitForm, handleInput, handlePhotoChange, photoRender, photoInput, isLoading, message, formValues, isValid, errorMessage } = useFormSubmit(
-    {
-      required: ["password", "username"],
+  const { resData, apiCall } = useApiCall();
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit, isSubmitting } = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
     },
-    apiUrl
-  );
-  const navigate = useNavigate();
-  let LoginMessage = "";
-  function isValidJSON(str) {
-    try {
-      JSON.parse(str);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-  if (isValidJSON(message)) {
-    let data = JSON.parse(message);
-    if (data?.login === "Success") {
-      localStorage.setItem("serverInfo", message);
-      navigate("/dashboard");
-    }
-    if (data?.login === "Failed") {
-      LoginMessage = "Username or Password is incorrect";
-    }
-    console.log(data);
-  }
+    validationSchema: loginSchema,
+    onSubmit: async (values, action) => {
+      let url = environment.apiUrl + "login.php";
+      let data = new FormData();
+      Object.keys(values).forEach((key) => {
+        data.append(key, values[key]);
+      });
+      apiCall(url, data);
+      console.log(resData);
+      action.resetForm();
+    },
+  });
 
   return (
     <div className="bg-blue-300">
       <div className="container">
-        <form onSubmit={submitForm}>
+        <form onSubmit={handleSubmit}>
           <section id="web-job-category" className="">
             <MotionWrapScale>
               <div className=" py-20 px-12 rounded-md  flex justify-center items-center text-gray-800">
@@ -47,22 +39,20 @@ export default function Login() {
 
                   <div className="space-y-2">
                     <h4 className="text-md">Username</h4>
-                    <div className="text-red-600 italic">{errorMessage?.username}</div>
-                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Username" name="username" onChange={handleInput} value={formValues.username} />
+                    <div className="text-red-600 italic">{touched.username && errors?.username}</div>
+                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="text" placeholder="Enter Your Username" name="username" onChange={handleChange} onBlur={handleBlur} value={values.username} />
                   </div>
 
                   <div className="space-y-2">
                     <h4 className="text-md">Password</h4>
-                    <div className="text-red-600 italic">{errorMessage?.password}</div>
-                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="password" placeholder="Enter Your Password" name="password" onChange={handleInput} value={formValues.password} />
+                    <div className="text-red-600 italic">{touched.password && errors?.password}</div>
+                    <input className="w-full h-10 rounded-md px-4 border border-green-900 bg-white" type="password" placeholder="Enter Your Password" name="password" onChange={handleChange} onBlur={handleBlur} value={values.password} />
                   </div>
 
                   <div className="">
-                    <Button className="mx-auto block bg-blue-500 px-6 py-1 rounded-full text-white">Login</Button>
-                    {isLoading && <div className="text-green-600 text-xl text-center py-2">Submitting...</div>}
-                    <div className=" text-xl text-center py-2 text-red-600" style={!isValid ? { color: "red" } : {}}>
-                      {LoginMessage}
-                    </div>
+                    <Button type="submit" className="mx-auto block bg-blue-500 px-6 py-1 rounded-full text-white">
+                      Login
+                    </Button>
                   </div>
 
                   <div className="flex justify-between items-center">
